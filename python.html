@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="CODING.SCHULE.png" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="cheatsheet.css" rel="stylesheet" type="text/css">
+    <title>Python Cheat Sheet</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </head>
+  <body>
+    <h1 class="text-center" style="margin: 1rem !important;">Python Cheat Sheet</h1>
+    <div class="container">
+        <div class="card-columns">
+            <div class="card">
+                <div class="card-header" style="background-color: #FF5C5C">
+                    <h5 class="card-title text-white">Datentypen</h5>
+                </div>
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-3">int</dt>
+                        <dd class="col-sm-9">
+                            <p class="h6">integer</p>
+                            <p>Ganzzahl: <var>2 3 42</var></p>
+                        </dd>
+                        <dt class="col-sm-3">float</dt>
+                        <dd class="col-sm-9">
+                          <p>Gleitkommazahl: <var>3.14 2.71</var></p>
+                          <p class="text-danger">Dezimaltrennzeichen: Punkt</p>
+                        </dd>                      
+                        <dt class="col-sm-3">bool</dt>
+                        <dd class="col-sm-9"><p>Wahrheitswert: <var>True False</var></p></dd>
+                        <dt class="col-sm-3">str</dt>
+                        <dd class="col-sm-9">
+                            <p class="h6">string</p>
+                            <p>Eine Sequenz von Symbolen: <var>"Hallo Welt!"</var></p>
+                        </dd>
+                        <dt class="col-sm-3">None</dt>
+                        <dd class="col-sm-9">Nullwert</dd>
+                      </dl>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" style="background-color: #FF5C5C">
+                    <h5 class="card-title text-white">Datenstrukturen</h5>
+                </div>
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-3">list</dt>
+                        <dd class="col-sm-9">
+                            <p class="h6">Liste</p>
+                            <p>Veränderbar: <var>[2, 3, 42]</var></p>
+                        </dd>
+                        <dt class="col-sm-3">tuple</dt>
+                        <dd class="col-sm-9">
+                            <p>Unveränderbar: <var>(2, 3, 42)</var></p>
+                        </dd>
+                        <dt class="col-sm-3">dict</dt>
+                        <dd class="col-sm-9">
+                            <p class="h6">Dictionary</p>
+                            <p>Schlüssel-Wert Paare:<br>
+                            <var>{ "Schlüssel": Wert,<br>   "Schlüssel2" : "Anderer Wert" }</var></p>
+                        </dd>                      
+                      </dl>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" style="background-color: #FF5C5C">
+                    <h5 class="card-title text-white">Built-in Funktionen</h5>
+                    <h6 class="card-subtitle"><em>Auszug</em></h6>
+                </div>
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-3">print()</dt>
+                        <dd class="col-sm-9">
+                            <p>Gibt den Inhalt der Klammer über die Python Shell aus.</p>
+                        </dd>
+                        <dt class="col-sm-3">input()</dt>
+                        <dd class="col-sm-9">
+                            <p>Fordert den Benutzer zur Eingabe auf. Input liefert immer einen String als Datentyp.</p>
+                        </dd>
+                        <dt class="col-sm-3">type()</dt>
+                        <dd class="col-sm-9">
+                            <p>Bestimmt den Datentype des Parameters in der Klammer.</p>
+                        </dd>
+                        <dt class="col-sm-3">int()</dt>
+                        <dd class="col-sm-9">
+                            <p>Ändert den Datentyp zu einem Integer, wenn möglich.</p>
+                        </dd>
+                        <dt class="col-sm-3">str()</dt>
+                        <dd class="col-sm-9">
+                            <p>Ändert den Datentyp zu einem String.</p>
+                        </dd>
+                        <dt class="col-sm-3">range()</dt>
+                        <dd class="col-sm-9">
+                            <p>Generiert eine Liste von Zahlen vom Start bis zum Zielwert in beliebigen Schritten.<br>
+                            <var>range(start, stop, step)</var><br> 
+                            <var>start</var> und <var>step</var> sind optional. Stoppwert ist nicht mehr enthalten.</p>
+                        </dd>                                    
+                      </dl>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" style="background-color: #FF5C5C">
+                    <h5 class="card-title text-white">Arithmetische Operatoren</h5>
+                </div>
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-3">+</dt>
+                        <dd class="col-sm-9">
+                            Addition
+                        </dd>
+                        <dt class="col-sm-3">-</dt>
+                        <dd class="col-sm-9">
+                            Subtraktion
+                        </dd>
+                        <dt class="col-sm-3">*</dt>
+                        <dd class="col-sm-9">
+                            Multiplikation
+                        </dd>
+                        <dt class="col-sm-3">/</dt>
+                        <dd class="col-sm-9">
+                            Division
+                        </dd>
+                        <dt class="col-sm-3">//</dt>
+                        <dd class="col-sm-9">
+                            Ganzzahlige Division
+                        </dd>
+                        <dt class="col-sm-3">%</dt>
+                        <dd class="col-sm-9">
+                            Modulo-Operator<br>Rest einer Division
+                        </dd>
+                        <dt class="col-sm-3">**</dt>
+                        <dd class="col-sm-9">
+                            Potenzieren
+                        </dd>                                             
+                      </dl>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" style="background-color: #FF5C5C">
+                    <h5 class="card-title text-white">Vergleichs Operatoren</h5>
+                </div>
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-3">==</dt>
+                        <dd class="col-sm-9">
+                            gleich
+                        </dd>
+                        <dt class="col-sm-3"><</dt>
+                        <dd class="col-sm-9">
+                            kleiner als
+                        </dd>
+                        <dt class="col-sm-3">></dt>
+                        <dd class="col-sm-9">
+                            größer als
+                        </dd>
+                        <dt class="col-sm-3"><=</dt>
+                        <dd class="col-sm-9">
+                            kleiner oder gleich
+                        </dd>
+                        <dt class="col-sm-3">>=</dt>
+                        <dd class="col-sm-9">
+                            größer oder gleich
+                        </dd>
+                        <dt class="col-sm-3">!=</dt>
+                        <dd class="col-sm-9">
+                            nicht gleich
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" style="background-color: #FF5C5C">
+                    <h5 class="card-title text-white">Logische Operatoren</h5>
+                </div>
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-3">and</dt>
+                        <dd class="col-sm-9">
+                            Logisch und
+                        </dd>
+                        <dt class="col-sm-3">or</dt>
+                        <dd class="col-sm-9">
+                            Logisch oder
+                        </dd>
+                        <dt class="col-sm-3">not</dt>
+                        <dd class="col-sm-9">
+                            Logisch nicht
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="card text-center">
+                <img class="card-img-top" src="./CODING.SCHULE.png" alt="Codingschule">
+                <div class="card-body">
+                    <p class="card-text h4 text-muted"><a class="text-secondary" href="https://www.codingschule.de">www.codingschule.de</a></p>
+                  </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header" style="background-color: #FF5C5C">
+                    <h5 class="card-title text-white">Kontrollstrukturen</h5>
+                </div>
+                <div class="card-header">
+                    <h5>if / elif  / else</h5>
+                    <h6 class="card-subtitle">Bedinungen</h6>
+                </div>
+                <div class="card-body border-bottom">
+                    <pre><code>alter = 28
+if alter >= 18:
+    print("Du darfst wählen!")
+elif alter >= 16:
+    print("Du darfst bei \
+    Kommunalwahlen wählen")
+else:
+    print("Zu jung zum Wählen")</code></pre>
+                </div>
+                <div class="card-header">
+                    <h5>for</h5>
+                    <h6 class="card-subtitle">for-Schleife</h6>
+                </div>
+                <div class="card-body border-bottom">
+                    <pre><code class="Python">for i in range(2,10):
+    print(i)</code></pre>
+
+                </div>
+                <div class="card-header">
+                    <h5>while</h5>
+                    <h6 class="card-subtitle">while-Schleife</h6>
+                </div>
+                <div class="card-body">
+                    <pre><code>x = 2
+while x < 10:
+    print(x)
+    x += 1</code></pre>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" style="background-color: #FF5C5C">
+                    <h5 class="card-title text-white">Funktionen</h5>
+                </div>
+                <div class="card-body">
+                    <pre><code>def meineFunktion(parameter):<br>    return parameter</code></pre>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" style="background-color: #FF5C5C">
+                    <h5 class="card-title text-white">Bibliotheken</h5>
+                </div>
+                <div class="card-body">
+                    <pre><code>import bibliothek<br>from bibliothek import meineFunktion</code></pre>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" style="background-color: #FF5C5C">
+                    <h5 class="card-title text-white">Klassen</h5>
+                </div>
+                <div class="card-body">
+                    <pre><code>class MeineKlasse:<br>    # Klasse mit Attributen<br>    # und Methoden</code></pre>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <!-- <div class="footer"><img src="CODING.SCHULE.png" class="img-fluid"></div> -->
+  </body>
+</html>
