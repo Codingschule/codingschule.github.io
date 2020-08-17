@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/default.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </head>
   <body>
     <h1 class="text-center" style="margin: 1rem !important;">Python Cheat Sheet</h1>
@@ -30,16 +33,45 @@
                         </dd>
                         <dt class="col-sm-3">float</dt>
                         <dd class="col-sm-9">
-                          <p>Gleitkommazahl: <var>3.14 2.71</var></p>
+                          <p class="mb-0">Gleitkommazahl: <var>3.14 2.71</var></p>
                           <p class="text-danger">Dezimaltrennzeichen: Punkt</p>
                         </dd>                      
                         <dt class="col-sm-3">bool</dt>
                         <dd class="col-sm-9"><p>Wahrheitswert: <var>True False</var></p></dd>
                         <dt class="col-sm-3">str</dt>
-                        <dd class="col-sm-9">
+                        <dd class="col-sm-9 mb-0">
                             <p class="h6">string</p>
                             <p>Eine Sequenz von Symbolen: <var>"Hallo Welt!"</var></p>
                         </dd>
+                        <div class="card">
+                            <div class="card-header p-0">
+                                <button class="btn btn-light btn-block" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                  String Methoden
+                                </button>
+                            </div>
+                            <div id="collapseOne" class="collapse">
+                              <div class="card-body pb-0">
+                                <dl class="row">
+                                    <dt class="col-sm-4">lower()</dt>
+                                    <dd class="col-sm-8">
+                                        <p>Gibt den String in Kleinbuchstaben zurück.</p>
+                                    </dd>
+                                    <dt class="col-sm-4">upper()</dt>
+                                    <dd class="col-sm-8">
+                                      <p>Gibt den String in Großbuchstaben zurück.</p>
+                                    </dd>                      
+                                    <dt class="col-sm-4">count()</dt>
+                                    <dd class="col-sm-8">
+                                        <p>Gibt die Anzahl der Elemente in der Klammer zurück.</p>
+                                    </dd>
+                                    <dt class="col-sm-4">replace()</dt>
+                                    <dd class="col-sm-8">
+                                        <p>Ersetzt ein Element durch ein anderes.</p>
+                                    </dd> 
+                                </dl>
+                              </div>
+                            </div>
+                        </div>
                         <dt class="col-sm-3">None</dt>
                         <dd class="col-sm-9">Nullwert</dd>
                       </dl>
@@ -272,6 +304,8 @@ while x < 10:
         </div>
         
     </div>
-    <!-- <div class="footer"><img src="CODING.SCHULE.png" class="img-fluid"></div> -->
+    <div class="container"><div class="row justify-content-md-center">
+        <a href="https://www.codingschule.de/impressum">Impressum</a>
+    </div></div>
   </body>
 </html>
