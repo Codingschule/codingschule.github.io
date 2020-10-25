@@ -32,6 +32,7 @@
 
     .card {
         page-break-inside: avoid;
+        border-width:3px !important;
     }
 
     .cs_footer {
