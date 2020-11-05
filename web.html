@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="CODING.SCHULE.png" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="cheatsheet.css" rel="stylesheet" type="text/css">
+    <title>Web Cheat Sheet</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <h1 class="text-center" style="margin: 1rem !important;">HTML Cheat Sheet</h1>
+    <div class="container">
+        <div class="card-columns">
+            <div class="card">
+                <div class="card-header" style="background-color: #FF5C5C">
+                    <h5 class="card-title text-white">Basics Tags</h5>
+                </div>
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-12">&lt;html&gt;&lt;/html&gt;</dt>
+                        <dd class="col-sm-12">
+                            <p>Erzeugt ein HTML Dokument.</p>
+                        </dd>
+                        <dt class="col-sm-12">&lt;head&gt;&lt;/head&gt;</dt>
+                        <dd class="col-sm-12">
+                          <p>Nicht sichtbare Informationen im Dokument, z.B. Seitentitel</p>
+                        </dd>                      
+                        <dt class="col-sm-12">&lt;body&gt;&lt;/body&gt;</dt>
+                        <dd class="col-sm-12"><p>Sichtbarer Teil des Dokuments</p></dd>
+                        <dt class="col-sm-12">&lt;title&gt;&lt;/title&gt;</dt>
+                        <dd class="col-sm-12"><p>Seitentitle im Browserfenster</p></dd>
+                        <div class="card">
+                            <div class="card-header p-0">
+                                <button class="btn btn-light btn-block" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                  HTML Grundgerüst
+                                </button>
+                            </div>
+                            <div id="collapseOne" class="collapse">
+                              <div class="card-body pb-0">
+                                <pre><code>&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Seitentitle&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        Seiteninhalt
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                              </div>
+                            </div>
+                        </div>
+                      </dl>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" style="background-color: #FF5C5C">
+                    <h5 class="card-title text-white">Text Tags</h5>
+                    <h6 class="card-subtitle"><em>Definition von Textarten</em></h6>
+                </div>
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-12">&lt;h1&gt;&lt;/h1&gt; --> &lt;h6&gt;&lt;/h6&gt;</dt>
+                        <dd class="col-sm-12">
+                            <p>Überschriften;<br>von h1 (größte) bis h6 (kleinste)</p>
+                        </dd>
+                        <dt class="col-sm-12">&lt;code&gt;&lt;/code&gt;</dt>
+                        <dd class="col-sm-12">
+                            <p>Computer Code; Monospace</p>
+                        </dd>
+                        <dt class="col-sm-12">&lt;em&gt;&lt;/em&gt;</dt>
+                        <dd class="col-sm-12">
+                            <p></p>
+                        </dd>
+                        <dt class="col-sm-12">&lt;strong&gt;&lt;/strong&gt;</dt>
+                        <dd class="col-sm-12">
+                            <p></p>
+                        </dd>                     
+                      </dl>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" style="background-color: #FF5C5C">
+                    <h5 class="card-title text-white">Links</h5>
+                </div>
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-12">&lt;a href="URL"&gt;&lt;/a&gt;</dt>
+                        <dd class="col-sm-12">
+                            <p>Erzeugt einen Hyperlink zu einer URL oder HTML-Dokument.</p>
+                        </dd>
+                        <dt class="col-sm-12">&lt;a href="mailto:EMAIL_ADDRESS"&gt;&lt;/a&gt;</dt>
+                        <dd class="col-sm-12">
+                            <p>Erzeugt einen Hyperlink zu einer EMail-Adresse (Standard Mail-Programm)</p>
+                        </dd>
+                        <dt class="col-sm-12">&lt;a name="NAME"&gt;&lt;/a&gt;</dt>
+                        <dd class="col-sm-12">
+                            <p>Erzeugt einen Anker innerhalb eines Dokuments.</p>
+                        </dd>
+                        <dt class="col-sm-12">&lt;a href="#NAME"&gt;&lt;/a&gt;</dt>
+                        <dd class="col-sm-12">
+                            <p>Erzeugt einen Hyperlink auf einen Anker (auch für ein anderes Dokument möglich).</p>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" style="background-color: #FF5C5C">
+                    <h5 class="card-title text-white">Formatierung</h5>
+                </div>
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-12">&lt;p&gt;&lt;/p&gt;</dt>
+                        <dd class="col-sm-12">
+                            Erzeugt einen Absatz (<strong>P</strong>aragraph)
+                        </dd>
+                        <dt class="col-sm-12">&lt;br&gt;</dt>
+                        <dd class="col-sm-12">
+                            Fügt einen Zeilenumbruch ein (Break / Carriage Return).
+                        </dd>
+                        <dt class="col-sm-12">&lt;div&gt;&lt;/div&gt;</dt>
+                        <dd class="col-sm-12">
+                            Block Inhalte die mit CSS formatiert werden.
+                        </dd>
+                        <dt class="col-sm-12">&lt;span&gt;&lt;/span&gt;</dt>
+                        <dd class="col-sm-12">
+                            Inline Inhalte die mit CSS formatiert werden.
+                        </dd>                             
+                    </dl>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" style="background-color: #FF5C5C">
+                    <h5 class="card-title text-white">Listen</h5>
+                </div>
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-12">&lt;ul&gt;&lt;/ul&gt;</dt>
+                        <dd class="col-sm-12">
+                            Aufzahlungsliste (<strong>U</strong>norderd <strong>L</strong>ist)
+                        </dd>
+                        <dt class="col-sm-12">&lt;ol&gt;&lt;/ol&gt;</dt>
+                        <dd class="col-sm-12">
+                            Nummerierte Aufzahlungsliste (<strong>O</strong>rderd <strong>L</strong>ist)
+                        </dd>
+                        <dt class="col-sm-12">&lt;li&gt;&lt;/li&gt;</dt>
+                        <dd class="col-sm-12">
+                            Listeneintrag für &lt;ul&gt; und &lt;ol&gt; (<strong>L</strong>ist <strong>I</strong>tem)
+                        </dd>
+                        <div class="card">
+                        <div class="card-header p-0">
+                            <button class="btn btn-light btn-block" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Listen Beispiel
+                            </button>
+                        </div>
+                        <div id="collapseTwo" class="collapse">
+                            <div class="card-body pb-0">
+                            <pre><code>&lt;ul&gt;
+    &lt;li&gt;Listeneintrag&lt;/li&gt;
+    &lt;li&gt;Noch ein Eintrag&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                            </div>
+                        </div>
+                        </div>
+                        <dt class="col-sm-12">&lt;dl&gt;&lt;/dl&gt;</dt>
+                        <dd class="col-sm-12">
+                            Beschreibungslisten (<strong>D</strong>escription <strong>L</strong>ist)
+                        </dd>
+                        <dt class="col-sm-12">&lt;dt&gt;&lt;/dt&gt;</dt>
+                        <dd class="col-sm-12">
+                            Zu erleutender Ausdruck (<strong>D</strong>escription <strong>T</strong>erm)
+                        </dd>
+                        <dt class="col-sm-12">&lt;dd&gt;&lt;/dd&gt;</dt>
+                        <dd class="col-sm-12">
+                            Erläuterung (<strong>D</strong>escription <strong>D</strong>escription)
+                        </dd>
+                        <div class="card">
+                            <div class="card-header p-0">
+                                <button class="btn btn-light btn-block" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Beschreibungslisten Beispiel
+                                </button>
+                            </div>
+                            <div id="collapseThree" class="collapse">
+                                <div class="card-body pb-0">
+                                <pre><code>&lt;dl&gt;
+    &lt;dt&gt;HTML&lt;/dt&gt;
+    &lt;dd&gt;Auszeichnungssprache&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" style="background-color: #FF5C5C">
+                    <h5 class="card-title text-white">Grafische Elemente</h5>
+                </div>
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-12">&lt;hr&gt;</dt>
+                        <dd class="col-sm-12">
+                            Horziontale Linie
+                        </dd>
+                        <dt class="col-sm-12">&lt;img src="URL" /&gt;</dt>
+                        <dd class="col-sm-12">
+                            Fügt ein Bild ein.<br><em>src</em> gibt den Pfad / Dateinamen an.
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="card text-center">
+                <img class="card-img-top" src="./CODING.SCHULE.png" alt="Codingschule">
+                <div class="card-body">
+                    <p class="card-text h4 text-muted"><a class="text-secondary" href="https://www.codingschule.de">www.codingschule.de</a></p>
+                  </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header" style="background-color: #FF5C5C">
+                    <h5 class="card-title text-white">Formulare</h5>
+                </div>
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-12">&lt;form&gt;&lt;/form&gt;</dt>
+                        <dd class="col-sm-12">
+                            Definiert ein Formular.
+                        </dd>
+                        <dt class="col-sm-12">&lt;select name=?&gt;&lt;/select&gt;</dt>
+                        <dd class="col-sm-12">
+                            Erzeugt ein Pulldown Menü.
+                        </dd>
+                        <dt class="col-sm-12">&lt;select multiple name=? size=?&gt;&lt;/select&gt;</dt>
+                        <dd class="col-sm-12">
+                            Auswahlliste mit Mehrfachauswahl. Size gbit die Anzahl der sichtbaren Einträge aus.
+                        </dd>
+                        <dt class="col-sm-12">&lt;option&gt;&lt;/option&gt;</dt>
+                        <dd class="col-sm-12">
+                            Einträge für ein Pulldown Menü bzw. eine Auswahlliste.
+                        </dd>
+                        <dt class="col-sm-12">&lt;textarea name=? cols=? rows=?&gt;&lt;/textarea&gt;</dt>
+                        <dd class="col-sm-12">
+                            Textbox; Cols definiert die Anzahl der Zeichen in einer Zeile; Rows die Anzahl der Reihen.
+                        </dd>
+                        <dt class="col-sm-12">&lt;input type="checkbox" name=? value=?&gt;</dt>
+                        <dd class="col-sm-12">
+                            Erzeugt eine Checkbox. Wenn aktiv, wird der Wert (value) übertragen.<br>Alternativ <em>type="radio"</em>.
+                        </dd>
+                        <dt class="col-sm-12">&lt;input type="text" name=? size=?&gt;</dt>
+                        <dd class="col-sm-12">
+                            Einzeiliges Eingabefeld. Size entspricht der Anzahl an Zeichen.</em>.
+                        </dd>
+                        <dt class="col-sm-12">&lt;input type="submit" value=?&gt;</dt>
+                        <dd class="col-sm-12">
+                            Button zum absenden des Formulars.
+                        </dd>
+                        <div class="card">
+                        <div class="card-header p-0">
+                            <button class="btn btn-light btn-block" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Formular Beispiel
+                            </button>
+                        </div>
+                        <div id="collapseFour" class="collapse">
+                            <div class="card-body pb-0">
+                            <pre><code>&lt;form&gt;
+    &lt;select name="Auswahl"&gt;
+        &lt;option&gt;Eintrag 1&lt;/option&gt;
+        &lt;option&gt;Eintrag 3&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;input type="checkbox" name="Check"&gt;
+    &lt;input type="submit" value="submit"&gt;
+&lt;/form&gt;</code></pre>
+                            </div>
+                        </div>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" style="background-color: #FF5C5C">
+                    <h5 class="card-title text-white">Tabellen</h5>
+                </div>
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-12">&lt;table&gt;&lt;/table&gt;</dt>
+                        <dd class="col-sm-12">
+                            Erzeugt eine Tabelle.
+                        </dd>
+                        <dt class="col-sm-12">&lt;tr&gt;&lt;/tr&gt;</dt>
+                        <dd class="col-sm-12">
+                            Erezeugt eine Tabellenzeile (Table Row).
+                        </dd>
+                        <dt class="col-sm-12">&lt;td&gt;&lt;/td&gt;</dt>
+                        <dd class="col-sm-12">
+                            Zelle innerhalb einer Zeile.
+                        </dd>
+                        <div class="card">
+                        <div class="card-header p-0">
+                            <button class="btn btn-light btn-block" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            Tabellen Beispiel
+                            </button>
+                        </div>
+                        <div id="collapseFive" class="collapse">
+                            <div class="card-body pb-0">
+                            <pre><code>&lt;table&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Zellen Inhalt&lt;/td&gt;
+        &lt;td&gt;Zellen Inhalt2&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+                            </div>
+                        </div>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="card-columns"></div>
+        
+    </div>
+    <div class="container justify-content-md-center cs_footer">
+        <a class="text-secondary" href="https://www.codingschule.de/impressum">Impressum</a> - <a class="text-secondary" href="https://www.codingschule.de">www.codingschule.de</a>
+    </div>
+  </body>
+</html>
