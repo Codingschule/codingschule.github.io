@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+            <!-- The surrounding HTML is left untouched by FirebaseUI.
+     Your app may use that space for branding, controls and other customizations.-->
+        <div class="chat">
+            <div class ="chat-window" id="chat-window">
+                <div id="messages">
+                    <div class="msg">
+                        <span class="name">Host: </span>Hello and welcome to the chat!
+                    </div>
+                </div>
+                <form id="messageForm" autocomplete="off">
+                    <input type="text" id="msg-input" placeholder="Enter a Message">
+                    <button id="msg-btn" type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+        
+        <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

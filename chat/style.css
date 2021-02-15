@@ -1,0 +1,49 @@
+
+.chat-window {
+    background-color: lightblue;
+    width: 80%;
+    
+    margin: auto;
+    
+    border-radius: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+#messages {
+    overflow-y: scroll;
+    height: 500px;
+    padding: 10px;
+}
+
+.msg {
+    background-color: lightcoral;
+    border-radius: 10px;
+    padding: 10px;
+    /*font-size: 1.5em; */
+    width: fit-content;
+    margin: 5px;
+    max-width: 80%;
+}
+
+.my {
+    background-color: lightgreen;
+    margin-left: auto;
+}
+
+.name {
+    font-weight: bold;
+}
+
+#messageForm {
+    padding: 20px;
+    text-align: right;
+}
+
+#msg-input {
+    width: 80%;
+    border-radius: 5px;
+    border: solid 1px black;
+    font-size: 1.5rem;
+}
+
