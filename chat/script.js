@@ -23,25 +23,26 @@ const msgRef = db.ref("/msgs");
 
 //to store data in the msgs folder by creating a reference in database
 
-let name="";
+//let name="Marc";
+
 function init() {
   //firebase.auth().signInWithRedirect(provider);
-  name = "Marc";
-  firebase.auth().signInWithPopup(provider).then(function(result) {
+  //name = "Marc";
+  /*firebase.auth().signInWithPopup(provider).then(function(result) {
   // This gives you a Google Access Token. You can use it to access the Google API.
-  var token = result.credential.accessToken;
+  //var token = result.credential.accessToken;
   // The signed-in user info.
-  var user = result.user;
+  //var user = result.user;
   // ...
-  console.log(result);
+  //console.log(result);
   const msg = {
           dataName: "Mar",
           text: "und"
       };
   
       msgRef.push(msg);
-  msgRef.on('child_added', updateMsgs);
-}).catch(function(error) {
+  msgRef.on('child_added', updateMsgs); */
+/* }).catch(function(error) {
   // Handle Errors here.
   var errorCode = error.code;
   var errorMessage = error.message;
@@ -52,17 +53,17 @@ function init() {
   // ...
   console.log("Fehler");
   msgRef.on('child_added', updateMsgs);
-});
-  //name = prompt("Please enter your name");
-//  msgRef.on('child_added', updateMsgs);
-}
+}); */
+   // const name = prompt("Please enter your name");
+   // msgRef.on('child_added', updateMsgs);
+} 
 
 const updateMsgs = data =>{
     console.log(data.val());
     const {dataName, text} = data.val(); //get name and text
     console.log(dataName)
     //load messages, display on left if not the user's name. Display on right if it is the user.
-    const msg = `<div class="${dataName == name ? "msg my": "msg"}">
+    const msg = `<div class="${dataName == username ? "msg my": "msg"}">
       <span class = "name">${dataName}: </span>${text}
     </div>`
   
@@ -78,14 +79,17 @@ function sendMessage(e){
   
       if(!text.trim()) return alert('Please type a message'); //no msg submitted
       const msg = {
-          dataName: name,
+          dataName: username,
           text: text
       };
   
       msgRef.push(msg);
       msgInput.value = "";
   }  
-document.addEventListener('DOMContentLoaded', init);
+
+//document.addEventListener('DOMContentLoaded', init);
+const username = prompt("Please enter your name");
+msgRef.on('child_added', updateMsgs);
 
 msgForm.addEventListener('submit', sendMessage);
 
