@@ -25,6 +25,23 @@ const msgRef = db.ref("/msgs");
 
 //let name="Marc";
 
+var actionCodeSettings = {
+    // URL you want to redirect back to. The domain (www.example.com) for this
+    // URL must be in the authorized domains list in the Firebase Console.
+    url: 'http://localhost:5500/chat/chat.html',
+    // This must be true.
+    handleCodeInApp: true,
+    /*iOS: {
+      bundleId: 'com.example.ios'
+    //},
+    android: {
+      packageName: 'com.example.android',
+      installApp: true,
+      minimumVersion: '12'
+    },*/
+    //dynamicLinkDomain: 'example.page.link'
+  };
+
 function init() {
   //firebase.auth().signInWithRedirect(provider);
   //name = "Marc";
@@ -56,9 +73,61 @@ function init() {
 }); */
    // const name = prompt("Please enter your name");
    // msgRef.on('child_added', updateMsgs);
-} 
+   // Confirm the link is a sign-in with email link.
+   //let email = "marc.bertram@gmail.com"
+if (firebase.auth().isSignInWithEmailLink(window.location.href)) {
+  // Additional state parameters can also be passed via URL.
+  // This can be used to continue the user's intended action before triggering
+  // the sign-in operation.
+  // Get the email if available. This should be available if the user completes
+  // the flow on the same device where they started it.
+  var email = window.localStorage.getItem('emailForSignIn');
+  //console.log(email);
+  if (!email) {
+    // User opened the link on a different device. To prevent session fixation
+    // attacks, ask the user to provide the associated email again. For example:
+    email = window.prompt('Please provide your email for confirmation');
+  }
+  // The client SDK will parse the code from the link for you.
+  firebase.auth().signInWithEmailLink(email, window.location.href)
+    .then((result) => {
+      // Clear email from storage.
+      window.localStorage.removeItem('emailForSignIn');
+      // You can access the new user via result.user
+      // Additional user info profile not available via:
+      // result.additionalUserInfo.profile == null
+      // You can check if the user is marc.bnew or existing:
+      // result.additionalUserInfo.isNewUser
+      window.localStorage.setItem('username', result.user.displayName);
+      msgRef.on('child_added', updateMsgs);
+    })
+    .catch((error) => {
+      // Some error occurred, you can inspect the code: error.code
+      // Common errors could be invalid email and invalid or expired OTPs.
+    });
+}}
+
+function link() {
+   const email = prompt("Please enter your Email");
+   firebase.auth().sendSignInLinkToEmail(email, actionCodeSettings)
+  .then(() => {
+    console.log("link internal")
+    // The link was successfully sent. Inform the user.
+    // Save the email locally so you don't need to ask the user for it again
+    // if they open the link on the same device.
+    window.localStorage.setItem('emailForSignIn', email);
+    // ...
+  })
+  .catch((error) => {
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // ...
+  });
+}
+
 
 const updateMsgs = data =>{
+    const username = window.localStorage.getItem('username')
     console.log(data.val());
     const {dataName, text} = data.val(); //get name and text
     console.log(dataName)
@@ -76,6 +145,7 @@ const updateMsgs = data =>{
 function sendMessage(e){
     e.preventDefault();
     const text = msgInput.value;
+    const username = window.localStorage.getItem('username');
   
       if(!text.trim()) return alert('Please type a message'); //no msg submitted
       const msg = {
@@ -87,9 +157,14 @@ function sendMessage(e){
       msgInput.value = "";
   }  
 
-//document.addEventListener('DOMContentLoaded', init);
-const username = prompt("Please enter your name");
-msgRef.on('child_added', updateMsgs);
+if(!window.localStorage.getItem('emailForSignIn')) {
+  console.log("link")
+  document.addEventListener('DOMContentLoaded',link);
+}
+else {
+  document.addEventListener('DOMContentLoaded', init);
+}
+
 
 msgForm.addEventListener('submit', sendMessage);
 
