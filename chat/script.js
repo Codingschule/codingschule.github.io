@@ -98,7 +98,8 @@ if (firebase.auth().isSignInWithEmailLink(window.location.href)) {
       // result.additionalUserInfo.profile == null
       // You can check if the user is marc.bnew or existing:
       // result.additionalUserInfo.isNewUser
-      window.localStorage.setItem('username', result.user.displayName);
+      console.log(result);
+      window.localStorage.setItem('username', prompt("Please enter your Username"));
       msgRef.on('child_added', updateMsgs);
     })
     .catch((error) => {
