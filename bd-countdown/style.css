@@ -1,0 +1,45 @@
+body {
+    height: 100vh;
+    background: rgb(255,92,92);
+    background: linear-gradient(90deg, rgba(255,92,92,1) 10%, rgba(61,150,204,1) 90%);
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    text-align: center;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.social {
+    display: flex;
+    justify-content: space-around;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+a {
+    color: white;
+}
+
+i.fa-birthday-cake {
+    font-size: 4em;
+}
+
+i {
+    font-size: 3rem;
+}
