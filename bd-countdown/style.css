@@ -19,9 +19,9 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-.social {
-    width: 50%;
+.socialorg {
     padding: 20px;
+    flex: 1;
 }
 
 .socialicons {
@@ -30,8 +30,10 @@ body {
     padding: 20px;
 }
 
-.socialbar {
+.social {
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 h1 {
@@ -52,6 +54,7 @@ i.fa-birthday-cake {
 
 i {
     font-size: 3rem;
+    padding: 5px;
 }
 
 img.logo {
