@@ -6,7 +6,7 @@ body {
     padding: 0;
 }
 .main {
-    height: 100vh;
+    min-height: 98vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -37,7 +37,7 @@ body {
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 3.0em;
 }
 
 h2 {
@@ -58,6 +58,6 @@ i {
 }
 
 img.logo {
-    height: 8vh;
+    height: 10vh;
     background-color: #ffffff;
 }
