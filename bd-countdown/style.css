@@ -4,13 +4,14 @@ body {
     background: linear-gradient(90deg, rgba(255,92,92,1) 10%, rgba(61,150,204,1) 90%);
     margin: 0;
     padding: 0;
-}
-
-.main {
-    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.main {
+    /*height: 100vh;*/
+
 }
 
 .content {
