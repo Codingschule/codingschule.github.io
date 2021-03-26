@@ -19,8 +19,8 @@ const x = setInterval(function() {
   // Display the result in the element with id="demo"
   if (days === 1) {let dayNaming = "Tag"} else {let dayNaming="Tage"}
 
-  document.getElementById("countdown").innerHTML = days + " Tage " + hours + " Stunden "
-  + minutes + " Minuten " + seconds + " Sekunden ";
+  document.getElementById("countdown").innerHTML = days + " Tage, " + hours + " Stunden, "
+  + minutes + " Minuten, " + seconds + " Sekunden ";
 
   // If the count down is finished, write some text
   if (distance < 0) {

@@ -20,9 +20,18 @@ body {
 }
 
 .social {
+    width: 50%;
+    padding: 20px;
+}
+
+.socialicons {
     display: flex;
     justify-content: space-around;
     padding: 20px;
+}
+
+.socialbar {
+    display: flex;
 }
 
 h1 {
@@ -43,4 +52,9 @@ i.fa-birthday-cake {
 
 i {
     font-size: 3rem;
+}
+
+img.logo {
+    height: 10vh;
+    background-color: #ffffff;
 }
