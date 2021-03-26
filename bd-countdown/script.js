@@ -17,6 +17,8 @@ const x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Display the result in the element with id="demo"
+  if (days === 1) {let dayNaming = "Tag"} else {let dayNaming="Tage"}
+
   document.getElementById("countdown").innerHTML = days + " Tage " + hours + " Stunden "
   + minutes + " Minuten " + seconds + " Sekunden ";
 
