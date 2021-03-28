@@ -17,10 +17,12 @@ const x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Display the result in the element with id="demo"
-  if (days === 1) {let dayNaming = "Tag"} else {let dayNaming="Tage"}
+  if (days === 1) {var dayNaming = " Tag, "} else {var dayNaming=" Tage, "}
+  if (hours === 1) {var hourNaming = " Stunde, "} else {var hourNaming=" Stunden, "}
+  if (minutes === 1) {var minuteNaming = " Minute, "} else {var minuteNaming=" Minuten, "}
+  if (seconds === 1) {var secondNaming = " Sekunde"} else {var secondNaming=" Sekunden"}
 
-  document.getElementById("countdown").innerHTML = days + " Tage, " + hours + " Stunden, "
-  + minutes + " Minuten, " + seconds + " Sekunden ";
+  document.getElementById("countdown").innerHTML = days + dayNaming + hours + hourNaming + minutes + minuteNaming + seconds + secondNaming;
 
   // If the count down is finished, write some text
   if (distance < 0) {
